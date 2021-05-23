@@ -128,7 +128,10 @@
 			    <input name="senhaLogin" maxlength="50" type="password" class="form-control" id="exampleInputPassword1">
 			    <span style="color: red; display: block;"><?php echo $erroSenhaLogin; ?></span>
 			  </div>
-			  <button type="submit" class="btn btn-primary">Entrar</button>
+			  <div>
+			  	<button type="submit" class="btn btn-primary">Entrar</button>
+			  	<span style="float: right;">Não tem uma conta? <a href="cadastrar.php">Cadastre-se</a></span>
+			  </div>
 			</form>
 	  </div>
 	</div>
