@@ -82,13 +82,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <!-- Título -->
     <title>Login</title>
   </head>
   <body>
   	<!-- INÍCIO: NAVEGACAO TOPO -->
   	<nav class="navbar navbar-light bg-light">
-	  <div class="container-fluid">
+	  <div class="container">
 	    <a class="navbar-brand" href="index.php">
 	      <img src="imagens/logo.png" width="40">
 	      <span style="margin-left: 10px;">BATER SEU PONTO</span>

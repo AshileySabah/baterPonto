@@ -9,6 +9,29 @@
 		$tipoConta = '- funcionário';
 	}
 ?>
+<?php
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+		if($_POST['emailLogin'] == null || strlen($_POST['emailLogin'])<3){
+			$erroEmailLogin = "*Endereço de email inválido.";
+		}
+		if($_POST['senhaLogin'] == null || strlen($_POST['senhaLogin'])<9){
+			//4 números, 2 letras minúsculas, 2 letras maiúsculas, 1 caracter especial
+			if($_POST['senhaLogin'] == null){
+				$erroSenhaLogin = "*Senha inválida.";
+			}
+			else{
+				$erroSenhaLogin = "*A senha deve conter pelo menos 9 caracteres.";
+			}
+		}
+		else{
+			$emailLogin = $_POST['emailLogin'];
+			$senhaLogin = $_POST['senhaLogin'];
+			
+			//se email não estiver no banco de dados, valida cadastro
+				//senão: alert - Esse email já possui cadastro	
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -17,6 +40,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <!-- Título -->
     <title>Cadastre-se</title>
     <!-- Google Fonts -->
@@ -26,7 +51,7 @@
   <body>
   	<!-- INÍCIO: NAVEGACAO TOPO -->
   	<nav class="navbar navbar-light bg-light">
-	  <div class="container-fluid">
+	  <div class="container">
 	    <a class="navbar-brand" href="index.php">
 	      <img src="imagens/logo.png" width="40">
 	      <span style="margin-left: 10px;">BATER SEU PONTO</span>
@@ -38,9 +63,8 @@
 	<!-- INÍCIO: FORMULÁRIO CADASTRO -->
 	<div class="card text-dark bg-light mb-3 mt-5" style="max-width: 50rem; margin: 0 auto;">
 	  <div class="card-header">Cadastre-se</div>
-	  
 	  <div class="card-body">
-    	<form method="get">
+    	<form method="post">
     		<div>
     			<span style="float: right; display: inline-block;">
     				<input type="radio" name="tipo_conta" value="funcionario"><label>Funcionário</label>
