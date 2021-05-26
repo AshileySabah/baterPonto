@@ -57,8 +57,8 @@
 
   		var temporizar = setInterval(relogio, 1000);
   	</script>
-  	<div align="center" style="margin: 50px 0;">
-  		<input style="text-align: center;" class="display-4" type="text" id="mostrarRelogio">
+  	<div id="caixaRelogio" align="center" style="margin: 50px 0;">
+  		<input style="text-align: center;" class="display-4" type="text" disabled id="mostrarRelogio">
   	</div>
   	<div class="container">
 	  <div class="row">

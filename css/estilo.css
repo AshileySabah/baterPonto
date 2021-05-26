@@ -1,3 +1,8 @@
 #navegacao a:hover{
 	color: orange;
 }
+#caixaRelogio input[type="text"]{
+	border: none;
+	background: white;
+	color: black;
+}
