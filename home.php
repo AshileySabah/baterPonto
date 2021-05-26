@@ -43,15 +43,29 @@
 	  </div>
 	</nav>
   	<!-- FIM: NAVEGACAO TOPO -->
-  	<div align="center" style="margin: 50px 0;" class="display-4">
-  		00:00:00
+  	<script>
+  		function relogio(){
+  			var horario = new Date();
+  			var hora = horario.getHours();
+  			var minuto = horario.getMinutes();
+  			var segundo = horario.getSeconds();
+
+  			var tempo = hora+":"+minuto+":"+segundo;
+
+  			document.getElementById("mostrarRelogio").value = tempo;
+  		}
+
+  		var temporizar = setInterval(relogio, 1000);
+  	</script>
+  	<div align="center" style="margin: 50px 0;">
+  		<input style="text-align: center;" class="display-4" type="text" id="mostrarRelogio">
   	</div>
   	<div class="container">
 	  <div class="row">
-	    <div class="col">
-	      <button style="width: 300px;" type="button" class="btn btn-primary">INICIAR</button>
+	    <div class="col-sm" align="center">
+	      <button style="width: 300px;" type="button" class="btn btn-primary mb-5">INICIAR</button>
 	    </div>
-	    <div class="col">
+	    <div class="col-sm" align="left">
 	      Registros
 	    </div>
 	  </div>
