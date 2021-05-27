@@ -6,11 +6,7 @@
 		header('Location: index.php');
 	}
 
-	$tabela = 0;
-	$contarRegistro = 0;
-
-	$listaRegistros = [];
-	$indiceListaRegistros = 0;
+	$tabela = false;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -75,14 +71,9 @@
 	      <h5>Registros</h5>
 	      <?php if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["btnRegistro"])){ 
 	      	$horarioRegistro = date('H:i:s');
-	      	$contarRegistro++;
-	      	$nomeInput = "registro$contarRegistro";
-
-	      	$listaRegistros[$indiceListaRegistros] = $horarioRegistro;
-	      	$indiceListaRegistros++;
+	      	$tabela = true;
 	      ?><!-- início SE POST E BOTÃO SETADO -->
-	      	<?php if($tabela == 0){
-	      		$tabela++;
+	      	<?php if($tabela){
 	      	?><!-- CONDIÇÃO FORMAR TABELA -->
 	      		<table class="table table-striped">
 	      			<tbody>
@@ -91,14 +82,6 @@
 							<td>Descrição</td>
 						</tr>
 	      	<?php } ?><!-- CONDIÇÃO FORMAR TABELA -->
-	      	<?php if($tabela > 0){ ?><!-- DEMAIS REGISTROS -->
-	      		<?php foreach ($listaRegistros as $cadaRegistro){ ?>
-	      			<tr>
-						<td><?php echo $cadaRegistro ?></td>
-						<td>Descrição</td>
-					</tr>
-	      		<?php } ?>
-	      	<?php } ?><!-- DEMAIS REGISTROS -->
 	      <?php } ?><!-- fim SE POST E BOTÃO SETADO -->
 	    </div>
 	  </div>
