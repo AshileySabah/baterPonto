@@ -32,7 +32,7 @@
 	    </button>
 	    <div class="collapse navbar-collapse" id="navbarText">
 	      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li id="navegacao" class="nav-item">
+	        <li class="formatInput" class="nav-item">
 	          <a style="margin-left: 30px;" class="nav-link active" aria-current="page" href="relatorios.php">Relatórios</a>
 	        </li>
 	      </ul>

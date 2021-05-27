@@ -55,7 +55,9 @@
 	    <a class="navbar-brand" href="index.php">
 	      <img src="imagens/logo.png" width="40">
 	      <span style="margin-left: 10px;">BATER SEU PONTO</span>
-	      <span style="font-family: 'Dancing Script', cursive; font-size: 30px;"><?php echo $tipoConta; ?></span>
+	      <span id="caixaTipoConta">
+		    <input style="font-family: 'Dancing Script', cursive; font-size: 30px;" disabled type="text" id="cadastrarConta">
+	      </span>
 	    </a>
 	  </div>
 	</nav>
@@ -67,10 +69,10 @@
     	<form method="post">
     		<div>
     			<span style="float: right; display: inline-block;">
-    				<input type="radio" name="tipo_conta" value="funcionario"><label>Funcionário</label>
+    				<input type="radio" id="funcionario" name="tipo_conta" value="funcionario"><label>Funcionário</label>
     			</span>
 		  		<span style="float: right; display: inline-block; margin-right: 20px;">
-		  			<input type="radio" name="tipo_conta" value="empresa" <?php echo $marcarTipoConta;?> ><label>Empresa</label>
+		  			<input type="radio" id="empresa" name="tipo_conta" value="empresa" <?php echo $marcarTipoConta;?> ><label>Empresa</label>
 		  		</span>
     		</div>
 			<div style="clear: both;"></div>
@@ -86,6 +88,20 @@
 			</form>
 	  </div>
 	</div>
+	<script>
+		function tipoDaConta(){
+			if(document.getElementById("funcionario").checked == true){
+				document.getElementById("cadastrarConta").value = " - funcionario";
+			}
+			else if(document.getElementById("empresa").checked == true){
+				document.getElementById("cadastrarConta").value = " - empresa";
+			}
+			else{
+				document.getElementById("cadastrarConta").value = "";
+			}
+		}
+		var pegarStatus = setInterval(tipoDaConta, 500);
+	</script>
 	<!-- FIM: FORMULÁRIO LOGIN -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
