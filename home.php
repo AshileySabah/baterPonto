@@ -85,10 +85,18 @@
 	      		<table class="table table-striped">
 	      			<tbody>
 						<tr>
-							<td>Horário</td>
-							<td>Descrição</td>
+							<th>Horário</th>
+							<th>Descrição</th>
 						</tr>
 	      	<?php } ?><!-- CONDIÇÃO FORMAR TABELA -->
+	      	<?php foreach ($listaHorario as $cadaLinhaRegistros){ 
+	      			$horarioRegistro = $cadaLinhaRegistros['horario'];
+	      		?><!-- início FOREACH PERCORRER REGISTROS HORÁRIOS -->
+	      		<tr>
+					<td><?php echo $horarioRegistro; ?></td>
+					<td>Descrição</td>
+				</tr>
+	      	<?php } ?><!-- fim FOREACH PERCORRER REGISTROS HORÁRIOS -->
 	      <?php } ?><!-- fim SE POST E BOTÃO SETADO -->
 	    </div>
 	  </div>
