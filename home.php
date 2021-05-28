@@ -1,3 +1,4 @@
+<?php include 'configuracoes.php'; ?>
 <?php
 	session_start();
 	//print_r($_SESSION);
@@ -72,6 +73,12 @@
 	      <?php if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["btnRegistro"])){ 
 	      	$horarioRegistro = date('H:i:s');
 	      	$tabela = true;
+	      	$sql = "INSERT INTO registros (horario) VALUES('$horarioRegistro')";
+	      	$conexao->exec($sql);
+
+	      	$query = "SELECT horario from registros";
+	      	$selecionarHorario = $conexao->query($query);
+	      	$listaHorario = $selecionarHorario->fetchAll();
 	      ?><!-- início SE POST E BOTÃO SETADO -->
 	      	<?php if($tabela){
 	      	?><!-- CONDIÇÃO FORMAR TABELA -->

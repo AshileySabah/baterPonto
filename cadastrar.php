@@ -1,13 +1,5 @@
 <?php
 	include 'configuracoes.php';
-	$tipoConta = '- empresa';
-	$marcarTipoConta = 'checked';
-?>
-<?php
-	if(isset($_GET['tipo_conta']) && $_GET['tipo_conta'] == 'funcionario'){
-		$marcarTipoConta = '';
-		$tipoConta = '- funcionário';
-	}
 ?>
 <?php
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
