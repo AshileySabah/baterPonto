@@ -1,4 +1,13 @@
-# site-bater-ponto
-Site responsivo para controle de horário de funcionários. O objetivo é registrar quando o usuário bateu ponto. As tecnologias que estou utilizando são PHP, JavaScript, MySQL, SQL, HTML, CSS e Bootstrap.
-Na página inicial (index.php), é possível fazer login ou se cadastrar. Uma vez feito o login, o usuário é redirecionando para a home.php, página em que o usuário pode registrar seus pontos.<br/><br/>
-[![tecnologias](https://img.shields.io/badge/MADE_WITH-PHP-blueviolet.svg?style=for-the-badge)](https://github.com/AshileySabah/site-bater-ponto)&nbsp;&nbsp;&nbsp;[![tecnologias](https://img.shields.io/badge/MADE_WITH-JavaScript-yellow.svg?style=for-the-badge)](https://github.com/AshileySabah/site-bater-ponto)
+# baterPonto
+Site responsivo para registrar horários (bater ponto). Tecnologias: PHP, JavaScript, MySQL, SQL, HTML, CSS e Bootstrap.
+
+Features:
+- Hora atual
+- Lista de horários
+- Histórico de registros
+
+[![tecnologias](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://github.com/AshileySabah/baterPonto)
+[![tecnologias](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://github.com/AshileySabah/baterPonto)
+[![tecnologias](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://github.com/AshileySabah/baterPonto)
+[![tecnologias](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://github.com/AshileySabah/baterPonto)
+[![tecnologias](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/AshileySabah/baterPonto)
